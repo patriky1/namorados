@@ -737,12 +737,12 @@ textarea.form-control {
     50% {
         background-color: blue;
         left: 0%;
-        top: 200px;
+        top: 100px;
     }
     75% {
         background-color: green;
         left: 90%;
-        top: 200px;
+        top: 150px;
     }
     100% {
         background-color: red;
