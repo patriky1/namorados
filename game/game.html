@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sim ou Não</title>
+  </head>
+  <style>
+    body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    background-color: #000;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 600px;
+    width: 600px;
+
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card > .question p {
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn-yes, .btn-no {
+    height: 48px;
+    width: 100px;
+
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-yes {
+    background-color: #9AFF9A;
+}
+
+.btn-no {
+    background-color: #FF4040;
+    color: #fff;
+}
+
+.answer {
+    display: none;
+}
+
+.answer > p {
+    font-size: 48px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #FF6EB4;
+    text-shadow: 1px 1px #000;
+}
+  </style>
+  <body>
+    <div class="card" id="card">
+      <div class="question" id="question">
+        <p>Sexo hoje???</p>
+        <div class="buttons">
+          <button id="yes" class="btn-yes">Sim!</button>
+          <button id="no" class="btn-no">Não</button>
+        </div>
+      </div>
+
+      <div class="answer" id="answer">
+        <p>Eu sabia! Te amo</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    let card = document.getElementById("card");
+
+// Exibir a mensagem caso seja selecionado o 'sim'
+document.querySelector("#yes").addEventListener("click", function () {
+  let question = document.getElementById("question");
+  let message = document.getElementById("answer");
+
+  card.style.backgroundImage =
+    "url('https://img1.picmix.com/output/stamp/normal/5/1/0/1/1171015_f458c.gif')";
+  question.style.display = "none";
+  message.style.display = "flex";
+});
+
+// Movimento aleatório do botão 'não'
+document.querySelector("#no").addEventListener("mouseover", function () {
+  let buttonWidth = this.offsetWidth;
+  let buttonHeight = this.offsetHeight;
+  let width = window.innerWidth - buttonWidth;
+  let height = window.innerHeight - buttonHeight;
+
+  this.style.position = "absolute";
+  this.style.top = Math.random() * height + "px";
+  this.style.left = Math.random() * width + "px";
+});
+
+  </script>
+</html>
