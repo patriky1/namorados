@@ -496,6 +496,7 @@ textarea.form-control {
     text-align: center;
     padding: 40px 0;
     color: #FFF;
+    top: 10%;
 }
 
 .copyright {
@@ -726,7 +727,7 @@ textarea.form-control {
     }
     0% {
         background-color: red;
-        left: 90%;
+        left: 80%;
         top: 0px;
     }
     25% {
@@ -741,12 +742,12 @@ textarea.form-control {
     }
     75% {
         background-color: green;
-        left: 90%;
+        left: 80%;
         top: 150px;
     }
     100% {
         background-color: red;
-        left: 90%;
+        left: 80%;
         top: 0px;
     }
 }
