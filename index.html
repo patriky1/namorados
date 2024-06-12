@@ -22,6 +22,18 @@
     <script src="assets/js/modernizr.custom.js"></script>
 
 </head>
+<style>
+    .blinking {
+        animation: blinker 1s linear infinite;
+        font-weight: bold;
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+</style>
 
 <body>
     <!-- Home start -->
@@ -85,7 +97,7 @@
                         <li><a href="#home">Um Feliz Dia Dos Namorados</a></li>
                         <li><a href="#portfolio">Quanto Tempo Juntos ?</a></li>
                         <li><a href="#testimonials">O Que Desejo</a></li>
-                        <li><a href="game/game.html">Pedido Especial</a></li>
+                        <li><a class="blinking" href="game/game.html">Pedido Especial</a></li>
                     </ul>
                 </div>
 
